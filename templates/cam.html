@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+  <title>EmoPlayer</title>
+  <!-- Styling -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}" />
+</head>
+
+<body ng-controller="appCtrl">
+
+  <!-- Camera body -->
+  <div id="cam-body">
+
+    <!-- Cam module -->
+    <div id="cam-container" ng-show="cam">
+      <div id="cam" class="card"></div>
+      <button ng-click="snap()" class="btn-large black">
+          <i class="material-icons">camera_alt</i>
+      </button>
+    </div>
+
+    <!-- Snapped module  -->
+    <div id="snap-container" ng-show="!cam">
+      <div id="snap" class="card"><img ng-src="{{ '{{imgURI}}' }}" id="snapImg" /></div>
+      <form class="buttons row" action="/emotion" method="post">
+        <input name="img" class="hide" id="imgIn" />
+        <button type="submit" class="btn-large black col s6">
+          <i class="material-icons">arrow_forward</i>
+        </button>
+        <button ng-click="retake()" class="btn-large black col s6">
+          <i class="material-icons">redo</i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+  <script src="{{ url_for('static', filename='js/webcam.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/cam-app.js')}}"></script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+body {
+  background-color: #212626;
+}
+
+nav form {
+  margin-left: 20vw;
+  width: 40vw;
+}
+
+h5 {
+  display: inline;
+}
+
+.text-white {
+  color: white;
+}
+
+.v-center {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+.large-icons {
+  font-size: xx-large !important;
+}
+
+.player-seek {
+  margin-top: 30px;
+}
+
+.player-ctrl > {
+
+}
+
+.material-icons {
+  cursor: pointer;
+}
+
+.brand-logo {
+  margin-left: 1em;
+}
+
+.horizontal {
+  height: 120px;
+}
+
+.horizontal > .card-image > img {
+  height: 120px;
+}
+
+.card-stacked > .card-content {
+  padding: 1em;
+}
+
+
+#nav-bottom {
+  bottom: 0 !important;
+  position: fixed;
+  opacity: 0.75;
+}
+
+#nav-metadata {
+  margin-top: 12px;
+  line-height: 20px;
+}
+
+#bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -100;
+  width: 100vw;
+  height: 100vh;
+  filter: blur(32px);
+  opacity: 0.75;
+}
+
+
+#snap, #cam {
+  width: 640px;
+  height: 480px;
+  margin: 0 auto;
+}
+
+#cam-body > div {
+  margin-top: 10vh;
+}
+
+#cam-body {
+  margin: 0 auto;
+  width: 640px;
+}
+
+#cam-container > .btn-large {
+  width: 640px;
+  border-radius: 0 !important;
+}
+
+.buttons > .btn-large {
+  border-radius: 0 !important;
+}
+
+
